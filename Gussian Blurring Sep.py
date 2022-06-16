@@ -14,8 +14,6 @@ import math
 
 import imageio 
 
-
-
 #supplemental functions 
 
 
@@ -66,9 +64,7 @@ def ConvolutionFunction(OriginalImage, Kernel):
     height = KernelHeight // 2
     
     width = KernelWidth // 2
-    
-    
-    
+      
     
     #initialize a new array of given shape and type, filled with zeros from padded image 
     
@@ -116,8 +112,6 @@ def ConvolutionFunction(OriginalImage, Kernel):
     #return the convolved image
     
     return ConvolvedImage[height: HeightEndPoint,  width: WidthEndPoint]
-
-
 
 #SeparableGaussianBlurImage function implementation 
 
@@ -178,11 +172,7 @@ def SeparableGaussianBlurImage(image, sigma):
 #similarly to the implementation of gaussian blur image 
 
 
-
-
 #Driver/Testing code
-
-
 
 
 #Required test:
@@ -190,43 +180,38 @@ def SeparableGaussianBlurImage(image, sigma):
 #Gaussian blur the image ”Seattle.jpg” with a sigma of 4.0, and save as ”2.png”
     
 
-a = SeparableGaussianBlurImage('hw1_data/Seattle.jpg', 4.0)
+a = SeparableGaussianBlurImage('Seattle.jpg', 4.0)
 
 plt.imshow(a)
     
 plt.imsave('2.png', a)
 
-
     
-#Written Assignmrnt extra tests
+#extra tests
 
     
 #try sigma = 2.0 
 
-b = SeparableGaussianBlurImage('hw1_data/Seattle.jpg', 2.0)
+b = SeparableGaussianBlurImage('Seattle.jpg', 2.0)
     
 plt.imshow(b)
     
 plt.imsave('SigmaIs2Sep.png', b)
 
 
-    
 #try sigma = 8.0
     
-c = SeparableGaussianBlurImage('hw1_data/Seattle.jpg', 8.0)
+c = SeparableGaussianBlurImage('Seattle.jpg', 8.0)
     
 plt.imshow(c)
     
 plt.imsave('SigmaIs8Sep.png', c)
 
 
- 
 #try sigma = 32.0 
     
-d = SeparableGaussianBlurImage('hw1_data/Seattle.jpg', 32.0)
+d = SeparableGaussianBlurImage('Seattle.jpg', 32.0)
     
 plt.imshow(d)
     
 plt.imsave('SigmaIs32Sep.png', d)
-
-
